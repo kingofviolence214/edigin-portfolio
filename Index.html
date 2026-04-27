@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Coding Business</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Code Platform</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#learn">Learn From Me</a></li>
+            <li><a href="#about-platform">About</a></li>
+            <li><a href="#founder-cv">Founder CV</a></li>
+        </ul>
+    </nav>
+
+    <main>
+       <section id="home" class="hero">
+            <h1 class="hero-title">EDIGIN SOLOMON</h1>
+            <h2 class="hero-subtitle">I am a <span id="typewriter" class="neon-text"></span><span class="cursor">|</span></h2>
+            
+            <p>Build real-world applications, learn modern coding, and launch your tech career.</p>
+            
+            <a href="#learn" class="primary-btn">Start Learning</a>
+        </section>
+        <section id="learn">
+            <h2>Learn From Me</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--text-main);">Master the skills to build real-world applications from scratch.</p>
+
+            <div class="course-grid">
+                <div class="course-details">
+                    <span class="price">₦5,000 / mo</span>
+                </div>
+                <button class="enroll-btn" data-course="Frontend Foundations" data-price="₦5,000">Enroll Now</button>
+
+                <div class="course-details">
+                    <span class="price">₦10,000 / mo</span>
+                </div>
+                <button class="enroll-btn" data-course="JavaScript Logic" data-price="₦10,000">Enroll Now</button>
+
+                <div class="course-details">
+                    <span class="price">₦20,000 / mo</span>
+                </div>
+                <button class="enroll-btn" data-course="Java & Database Backend" data-price="₦20,000">Enroll Now</button>
+            </div>
+        </section>
+
+        <section id="about-platform">
+            <h2>About This Platform</h2>
+            <p>This website is dedicated to bridging the gap between theoretical computer science and practical, real-world software development. We provide hands-on training and custom web solutions.</p>
+        </section>
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-main);">A selection of applications I've designed and engineered.</p>
+
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Secure ATM Simulation System</h3>
+                        <p>A fully functional banking simulation built from scratch. Features secure user authentication, transactional logic, and a relational database for managing account balances and histories.</p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">JDBC</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">OOP</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/YourUsername/Web-Platform" target="_blank" class="btn-outline">View Code (GitHub)</a>
+                        <a href="https://your-live-project-link.netlify.app" target="_blank" class="btn-solid">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Dynamic Web Platform</h3>
+                        <p>A responsive, mobile-first web application featuring a custom dark-mode UI, interactive DOM manipulation, and smooth asynchronous data handling.</p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-outline">View Code (GitHub)</a>
+                        <a href="#" class="btn-solid">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section id="founder-cv">
+            <h2>The Founder</h2>
+            
+            <div class="cv-container">
+                <div class="cv-header">
+                    <h3>Edigin Solomon Osadolor</h3>
+                    <p class="cv-title">Lead Developer & Instructor</p>
+                </div>
+                
+                <div class="cv-content">
+                    <div class="cv-section">
+                        <h4>Professional Summary</h4>
+                        <p>A focused Full Stack Web Development student passionate about building clean, responsive, and functional web applications. Dedicated to bridging the gap between theoretical computer science and practical, real-world software development.</p>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h4>Technical Skills</h4>
+                        <ul class="skills-list">
+                            <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                            <li><strong>Design:</strong> Responsive & Mobile-First Layouts</li>
+                            <li><strong>Backend:</strong> Object-Oriented Programming, SQL</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h4>Education</h4>
+                        <p><strong>Bowen University</strong></p>
+                        <p>Degree Focus: Web Development</p>
+                    </div>
+                </div>
+
+                <a href="Edigin_Solomon_CV.pdf" download="Edigin_Solomon_CV.pdf" class="download-btn">Download Full CV (PDF)</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Code Platform. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="terms.html">Terms and Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Complete Enrollment</h2>
+            
+            <div class="order-summary">
+                <h3 id="modalCourseName">Course Name</h3>
+                <p id="modalCoursePrice" class="modal-price">₦0 / mo</p>
+            </div>
+
+            <form id="checkoutForm">
+                <input type="text" id="studentName" placeholder="Full Name" required>
+                <input type="email" id="studentEmail" placeholder="Email Address" required>
+                <input type="tel" id="studentPhone" placeholder="Phone Number" required>
+                <button type="submit" class="pay-btn">Proceed to Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    
+    <script src="script.js"></script>
+    <a href="https://wa.me/2347037617951" class="whatsapp-float" target="_blank">
+        💬 Chat on WhatsApp
+    </a>
+</body>
+</html>

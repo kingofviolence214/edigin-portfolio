@@ -1,0 +1,584 @@
+html {
+    scroll-behavior: smooth;
+}
+/* --- 1. BASE SETTINGS & DARK MODE COLORS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- UPGRADED COLOR PALETTE --- */
+:root {
+    --bg-main: #050505;       /* Pure void black (sleeker than dark grey) */
+    --bg-card: #0f0f11;       /* Very dark card background */
+    --text-main: #a1a1aa;     /* Professional slate grey text */
+    --text-head: #ffffff;     /* Crisp white */
+    --accent: #00f2fe;        /* Striking Neon Cyan */
+    --accent-glow: rgba(0, 242, 254, 0.3);
+    --nav-bg: rgba(5, 5, 5, 0.8); /* See-through glass effect */
+    --border: #1f1f22;        
+}
+
+/* --- TYPEWRITER & HERO STYLING --- */
+.hero {
+    background: radial-gradient(circle at top center, #111827 0%, var(--bg-main) 100%);
+    text-align: left; /* Left align looks more premium than center */
+    padding: 8rem 10%;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-title {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.neon-text {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* The Blinking Cursor */
+.cursor {
+    display: inline-block;
+    color: var(--accent);
+    background-color: transparent;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--text-head);
+}
+
+/* --- 2. NAVIGATION BAR --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--text-head);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* --- 3. MAIN SECTIONS & HERO --- */
+section {
+    padding: 4rem 5%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.hero {
+    background: radial-gradient(circle at center, #1f2937 0%, var(--bg-main) 100%);
+    text-align: center;
+    padding: 6rem 5%;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent); /* Blue glowing text effect */
+}
+
+button {
+    background-color: var(--accent);
+    color: #000000; /* Dark text on bright button */
+    font-weight: bold;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 1rem;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05); /* Button slightly grows when touched */
+}
+
+/* --- 4. COURSE CARDS --- */
+.course-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows cards to stack on small screens */
+}
+
+.course-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    width: 45%;
+    min-width: 300px;
+    /* Smooth animation for the glow */
+    transition: all 0.3s ease-in-out; 
+}
+
+/* The Virtual Glow Effect */
+.course-card:hover {
+    transform: translateY(-5px); /* Card lifts off the screen slightly */
+    border-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent), 0 0 30px rgba(88, 166, 255, 0.2); 
+}
+
+.course-card:hover {
+    border-color: var(--accent); /* Card lights up when hovered */
+}
+
+.course-card h3 {
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+/* --- 5. FOOTER & LEGAL DOCS --- */
+footer {
+    background-color: var(--nav-bg);
+    text-align: center;
+    padding: 2rem 5%;
+    border-top: 1px solid var(--border);
+}
+
+.footer-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.legal-doc {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.legal-doc h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-head);
+}
+/* --- COURSE CARD EXTRAS --- */
+.badge {
+    background-color: #2ea043; /* Green for beginner */
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.badge.intermediate { background-color: #d29922; /* Yellow/Orange */ }
+.badge.advanced { background-color: #f85149; /* Red */ }
+
+.course-details {
+    display: flex;
+    justify-content: center; /* This centers the price */
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+}
+
+.price {
+    color: var(--text-head);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.enroll-btn {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+.enroll-btn {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    transition: all 0.2s ease;
+}
+
+.enroll-btn:hover {
+    background-color: var(--accent);
+    color: #000;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+/* Makes the button shrink slightly when clicked */
+.enroll-btn:active {
+    transform: scale(0.95);
+}
+/* --- 6. MOBILE APP DESIGN (The Magic Trick) --- */
+/* --- FOUNDER CV SECTION --- */
+.cv-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+}
+
+.cv-header h3 {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.cv-title {
+    color: var(--text-main);
+    font-style: italic;
+}
+
+.cv-section {
+    margin-bottom: 2rem;
+}
+
+.cv-section h4 {
+    color: var(--text-head);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-left: 3px solid var(--accent);
+    padding-left: 10px;
+}
+
+.skills-list {
+    list-style-type: none;
+}
+
+.skills-list li {
+    background: var(--bg-main);
+    margin-bottom: 0.8rem;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.skills-list strong {
+    color: var(--accent);
+}
+
+.download-btn {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: var(--text-head);
+    border: 1px solid var(--text-main);
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 3rem;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: var(--text-main);
+    color: var(--bg-main);
+}
+/* --- FEATURED PROJECTS --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: var(--text-head);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* The Tech Stack Pills */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+/* Action Buttons at the Bottom of Cards */
+.project-links {
+    display: flex;
+    border-top: 1px solid var(--border);
+}
+
+.project-links a {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-outline {
+    color: var(--text-main);
+    background: transparent;
+    border-right: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+    color: var(--text-head);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-solid {
+    color: #000;
+    background: var(--accent);
+}
+
+.btn-solid:hover {
+    background: #00d2df;
+}
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        justify-content: center;
+        padding: 1.2rem;
+        border-bottom: none;
+        border-top: 1px solid var(--border);
+    }
+
+    .logo { display: none; }
+
+    .nav-links { 
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body { padding-bottom: 80px; }
+}
+/* --- CHECKOUT MODAL STYLING --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dim the background */
+    z-index: 1000; /* Sit on top of everything */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid var(--accent);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.close-btn:hover { color: var(--accent); }
+
+.order-summary {
+    background-color: var(--bg-main);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.modal-price {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    border-radius: 6px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.pay-btn {
+    background-color: #2ea043; /* Green for payment */
+    color: white;
+    width: 100%;
+}
+
+.pay-btn:hover { background-color: #238636; }
+/* --- FLOATING WHATSAPP BUTTON --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Official WhatsApp Green */
+    color: #fff;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px);
+}
+/* --- PRIMARY BUTTON STYLING --- */
+.primary-btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--accent);
+}
