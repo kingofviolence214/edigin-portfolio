@@ -582,3 +582,45 @@ input:focus {
     transform: translateY(-3px);
     box-shadow: 0 0 20px var(--accent);
 }
+.project-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* GitHub Button: Subtle and professional */
+.github-btn {
+    background: #24292e;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+.github-btn:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+/* Live Demo Button: Bright and "Dynamic" */
+.demo-btn {
+    background: #00ffcc; /* Your Neon Cyan */
+    color: #000;
+}
+
+.demo-btn:hover {
+    background: #00cca3;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+    transform: translateY(-2px);
+}
