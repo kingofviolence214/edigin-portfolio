@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Coding Business</title>
-    <link rel="stylesheet" href="style.css">
     
+    <title>Edigin Solomon | Code Platform</title>
+    <meta name="description" content="Full-Stack Developer portfolio. Explore my Java applications, dynamic web platforms, and software engineering projects.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kingofviolence214.github.io/edigin-portfolio/">
+    <meta property="og:title" content="Edigin Solomon | Software Developer">
+    <meta property="og:description" content="Explore my Java applications, dynamic web platforms, and software engineering projects.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%2300f2fe'/></svg>">
+    
+    <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7C2FEV1D1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-T7C2FEV1D1');
+    </script>
 </head>
 <body>
 
@@ -16,7 +34,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#learn">Learn From Me</a></li>
             <li><a href="#about-platform">About</a></li>
-            <li><a href="#founder-cv">Founder CV</a></li>
+           <li><a href="Edigin_Solomon_CV.pdf" target="_blank">Download CV</a></li>
         </ul>
     </nav>
 
@@ -27,7 +45,13 @@
             
             <p>Build real-world applications, learn modern coding, and launch your tech career.</p>
             
-            <a href="#learn" class="primary-btn">Start Learning</a>
+            <div style="display: flex; gap: 15px; margin-top: 2rem;">
+    <a href="#learn" class="primary-btn">Start Learning</a>
+    
+    <a href="Edigin_Solomon_CV.pdf" target="_blank" class="primary-btn" style="background: transparent; color: var(--accent); border: 2px solid var(--accent);">
+        View Full CV
+    </a>
+</div>
         </section>
         <section id="learn">
             <h2>Learn From Me</h2>
@@ -55,80 +79,90 @@
             <h2>About This Platform</h2>
             <p>This website is dedicated to bridging the gap between theoretical computer science and practical, real-world software development. We provide hands-on training and custom web solutions.</p>
         </section>
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-main);">A selection of applications I've designed and engineered.</p>
+      <section id="projects" style="padding: 60px 20px;">
+    <h2 style="text-align: center; margin-bottom: 40px;">Featured Projects</h2>
 
-            <div class="project-card">
-    <div class="project-info">
-        <h3>Secure Java ATM Simulator</h3>
-        <p>A robust banking simulation built with Java OOP principles. Features secure PIN authentication and real-time transaction history.</p>
-        
-        <div class="project-buttons">
-            <a href="https://github.com/kingofviolence214/atm-simulator" target="_blank" class="btn github-btn">
-                <i class="fab fa-github"></i> GitHub Code
-            </a>
-            
-             <a href="https://atm-simulator.eddysolo214.replit.app" target="_blank" class="btn demo-btn">
-               <i class="fas fa-play"></i> Run Live Demo
-             </a>
-        </div>
-    </div>
-
-     <div class="project-card">
-        
-    <div class="project-info">
-        <h3>Dynamic Web Platform</h3>
-        <p>A full-stack tech education site with Paystack integration, automated email systems, and a responsive UI.</p>
-        
-        <div class="project-buttons">
-            <a href="https://github.com/kingofviolence214/edigin-portfolio" target="_blank" class="btn github-btn">
-                <i class="fab fa-github"></i> GitHub Code
-            </a>
-            
-            <a href="https://kingofviolence214.github.io/edigin-portfolio" target="_blank" class="btn demo-btn">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-        </div>
-    </div>
-</div>
-            </div>
-        </section>
-    <section id="founder-cv">
-            <h2>The Founder</h2>
-            
-            <div class="cv-container">
-                <div class="cv-header">
-                    <h3>Edigin Solomon Osadolor</h3>
-                    <p class="cv-title">Lead Developer & Instructor</p>
+    <div class="project-grid">
+        <div class="project-card">
+            <div class="project-image" style="background: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=600&auto=format&fit=crop') center/cover;"></div>
+            <div class="project-content">
+                <h3>Secure Java ATM Simulator</h3>
+                <p>A robust banking simulation built with Java OOP principles. Features secure PIN authentication and real-time transaction history.</p>
+                
+                <div class="tech-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">OOP</span>
+                    <span class="tag">Terminal</span>
                 </div>
                 
-                <div class="cv-content">
-                    <div class="cv-section">
-                        <h4>Professional Summary</h4>
-                        <p>A focused Full Stack Web Development student passionate about building clean, responsive, and functional web applications. Dedicated to bridging the gap between theoretical computer science and practical, real-world software development.</p>
-                    </div>
-                    
-                    <div class="cv-section">
-                        <h4>Technical Skills</h4>
-                        <ul class="skills-list">
-                            <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
-                            <li><strong>Design:</strong> Responsive & Mobile-First Layouts</li>
-                            <li><strong>Backend:</strong> Object-Oriented Programming, SQL</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="cv-section">
-                        <h4>Education</h4>
-                        <p><strong>Bowen University</strong></p>
-                        <p>Degree Focus: Web Development</p>
-                    </div>
+                <div class="project-buttons">
+                    <a href="https://atm-simulator.eddysolo214.replit.app" target="_blank" class="btn btn-solid">
+                        <i class="fas fa-eye"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/kingofviolence214/atm-simulator" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-github"></i> Code
+                    </a>
                 </div>
+            </div>
+        </div>
 
-                <a href="Edigin_Solomon_CV.pdf" download="Edigin_Solomon_CV.pdf" class="download-btn">Download Full CV (PDF)</a>
+        <div class="project-card">
+            <div class="project-image" style="background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop') center/cover;"></div>
+            
+            <div class="project-content">
+                <h3>Dynamic Web Platform</h3>
+                <p>A full-stack tech education site with Paystack integration, automated email systems, and a responsive UI.</p>
+                
+                <div class="tech-tags">
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Paystack API</span>
+                </div>
+                
+                <div class="project-buttons">
+                    <a href="https://kingofviolence214.github.io/edigin-portfolio" target="_blank" class="btn btn-solid">
+                        <i class="fas fa-eye"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/kingofviolence214/edigin-portfolio" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-github"></i> Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+         <section id="how-i-work" class="reveal">
+            <h2>How I Work</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Strategy & Logic</h3>
+                    <p>Mapping out the system architecture and choosing the right object-oriented principles before writing a single line of code.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Development</h3>
+                    <p>Building clean, secure backends and connecting them to highly responsive, dynamic frontends for a seamless user experience.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Deployment</h3>
+                    <p>Testing integrations (like Paystack or email APIs) and pushing the final software live to cloud platforms.</p>
+                </div>
             </div>
         </section>
-    </main>
+
+        <section id="tools" class="reveal">
+            <h2>Tools & Technologies</h2>
+            <div class="tools-container">
+                <span class="tool-badge">Java (OOP)</span>
+                <span class="tool-badge">JavaScript</span>
+                <span class="tool-badge">HTML5 / CSS3</span>
+                <span class="tool-badge">Git & GitHub</span>
+                <span class="tool-badge">Paystack API</span>
+                <span class="tool-badge">VS Code</span>
+            </div>
+        </section>
 
     <div id="checkoutModal" class="modal">
         <div class="modal-content">
@@ -155,22 +189,23 @@
     <a href="https://wa.me/2347037617951" class="whatsapp-float" target="_blank">
         💬 Chat on WhatsApp
     </a>
-    <section id="contact">
-    <div class="contact-container">
-        <h2>Get In Touch</h2>
-        <p>Have a project in mind? Let's build something extraordinary together.</p>
+   <section id="contact">
+            <div class="contact-container">
+                <h2>Get In Touch</h2>
+                <p>Have a project in mind? Let's build something extraordinary together.</p>
 
                 <form id="contact-form" action="https://formspree.io/f/mwvadlgw" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    
+                    <button type="submit" class="primary-btn" style="width: 100%;">Send Message</button>
+                </form>
             </div>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            
-            <button type="submit" class="primary-btn" style="width: 100%;">Send Message</button>
-        </form>
-    </div>
-    </section>
+        </section>
 
      <footer>
      <div class="footer-content" style="text-align: center; padding: 2rem; border-top: 1px solid #333; margin-top: 2rem;">

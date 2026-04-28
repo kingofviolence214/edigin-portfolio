@@ -96,3 +96,23 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+// --- SCROLL ANIMATION LOGIC ---
+function revealOnScroll() {
+    let reveals = document.querySelectorAll(".reveal");
+
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 100; // How many pixels until it triggers
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+
+// Listen for scrolling
+window.addEventListener("scroll", revealOnScroll);
+
+// Trigger it once immediately so the top of the page loads
+revealOnScroll();

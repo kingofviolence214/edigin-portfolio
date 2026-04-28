@@ -624,3 +624,186 @@ input:focus {
     box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
     transform: translateY(-2px);
 }
+/* --- NEW GRID PROJECT STYLING (YOUR CYAN THEME) --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--bg-card); /* Back to your dark void theme */
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--accent-glow);
+}
+
+.project-image {
+    height: 200px;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--text-head);
+}
+
+.project-content p {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* The Tech Tags - Back to your Neon Cyan */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--accent);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+/* The Buttons - Back to your Neon Cyan */
+.project-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: auto; 
+}
+
+.project-buttons .btn {
+    flex: 1; 
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+/* Solid Cyan Button */
+.btn-solid {
+    background-color: var(--accent);
+    color: #000;
+    border: 2px solid var(--accent);
+}
+
+.btn-solid:hover {
+    background-color: #00d2df;
+    border-color: #00d2df;
+}
+
+/* Outlined Cyan Button */
+.btn-outline {
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--border);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent);
+}
+/* --- HOW I WORK & TOOLS STYLING --- */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-step {
+    background: var(--bg-card);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.process-step:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--accent-glow);
+}
+
+.step-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: rgba(0, 242, 254, 0.05); /* Very faint cyan in the background */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tool-badge {
+    padding: 10px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-head);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tool-badge:hover {
+    background: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* --- SCROLL ANIMATION (THE MAGIC) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px); /* Pushes it down slightly */
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); /* Slides up into place */
+}
