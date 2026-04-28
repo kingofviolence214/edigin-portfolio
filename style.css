@@ -447,6 +447,7 @@ footer {
         padding: 1.2rem;
         border-bottom: none;
         border-top: 1px solid var(--border);
+        background-color: rgba(5, 5, 5, 0.95); /* Makes it slightly more solid on mobile */
     }
 
     .logo { display: none; }
@@ -465,6 +466,12 @@ footer {
     }
 
     body { padding-bottom: 80px; }
+
+    /* Inside your @media (max-width: 768px) block */
+    .whatsapp-float {
+        bottom: 140px; /* Pushed up significantly to clear the nav */
+        right: 20px;
+    }
 }
 /* --- CHECKOUT MODAL STYLING --- */
 .modal {
@@ -925,5 +932,78 @@ input:focus {
     }
     .about-bio h2 {
         text-align: center;
+    }
+}
+/* =========================================
+   FORM & MODAL FIXES (PC & MOBILE)
+   ========================================= */
+
+/* 1. Lock the Modal back into hiding */
+.modal {
+    display: none; /* Keeps it invisible until clicked */
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. Force all forms to stack cleanly */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+/* 3. The side-by-side inputs for the Contact Form on PC */
+.input-group {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.input-group input {
+    flex: 1; /* Makes Name and Email share the space equally */
+}
+
+/* 4. Beautiful, consistent inputs and text areas */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #0a0a0c;
+    border: 1px solid var(--border);
+    color: var(--text-head);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow); /* Neon glow when typing */
+}
+
+/* 5. Mobile override: Stack the Name and Email on top of each other on phones */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+    }
+}
+/* =========================================
+   ULTIMATE WHATSAPP MOBILE OVERRIDE
+   ========================================= */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 110px !important; /* Forces it permanently above the nav bar */
+        right: 15px !important;
+        transform: scale(0.9) !important; /* Shrinks it slightly so it takes up less space */
+        z-index: 9999 !important; /* Guarantees it stays on top */
     }
 }
