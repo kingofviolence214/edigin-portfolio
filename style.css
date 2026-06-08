@@ -1006,4 +1006,229 @@ input:focus, textarea:focus {
         transform: scale(0.9) !important; /* Shrinks it slightly so it takes up less space */
         z-index: 9999 !important; /* Guarantees it stays on top */
     }
+    /* Inside your @media (max-width: 768px) block */
+    .footer-brand, .footer-links, .footer-social {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+/* =========================================
+   TESTIMONIALS / REVIEWS SECTION
+   ========================================= */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.review-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15); /* Soft cyan glow */
+}
+
+.quote-icon {
+    font-size: 6rem;
+    color: var(--accent);
+    font-family: Georgia, serif;
+    line-height: 0;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    opacity: 0.1; /* Keeps it subtle in the background */
+    z-index: 0;
+}
+
+.review-text {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+}
+
+.reviewer-info h4 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.reviewer-info span {
+    color: var(--accent);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+/* =========================================
+   THE AGENCY FAT FOOTER
+   ========================================= */
+footer {
+    background-color: #050505;
+    border-top: 1px solid var(--border);
+    padding: 60px 5% 20px 5%;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 40px;
+}
+
+.footer-brand p {
+    color: var(--text-main);
+    margin-top: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-links h3, .footer-social h3 {
+    color: var(--text-head);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.back-to-top {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px); /* Causes a little 'bounce' effect */
+}
+
+/* Mobile Nav Bar Clearence Fix */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding-bottom: 80px; /* Pushes the copyright above your bottom nav bar */
+    }
+    /* --- FOOTER ALIGNMENT FIX --- */
+.footer-brand, .footer-links, .footer-social {
+    text-align: left;
+}
+
+.social-icons {
+    justify-content: center; /* Forces the buttons to line up on the left */
+}
+}
+/* Center align the entire footer content */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem; /* Adds breathing room between the bio and the connect section */
+}
+
+/* Ensure the social section stays centered */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Center the actual buttons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1rem;
+    flex-wrap: wrap; /* Prevents overlap on smaller mobile screens */
+}
+
+/* Ensure your social links look like the buttons in your screenshot */
+.social-icons a {
+    padding: 8px 20px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent);
+    color: #000;
+    box-shadow: 0 0 10px var(--accent-glow);
 }
